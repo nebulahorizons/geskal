@@ -20,7 +20,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center space-x-2">
               <Droplets className="h-8 w-8 text-aqua-600" />
               <span className="text-2xl font-bold bg-gradient-to-r from-aqua-600 to-ocean-700 bg-clip-text text-transparent">
-                Aqua Pure
+                GESKAL
               </span>
             </Link>
           </div>

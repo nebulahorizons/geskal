@@ -9,7 +9,6 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import StatsSection from "@/components/StatsSection";
 import CTASection from "@/components/CTASection";
-import ProductSection from "@/components/ProductSection";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -49,134 +48,23 @@ const Index = () => {
       name: "Michael Johnson",
       company: "Green Valley Farms",
       testimonial:
-        "Aqua Pure's bioremediation solutions helped restore our farm's water supply. Their team was professional, knowledgeable, and delivered results beyond our expectations.",
+        "GESKAL's bioremediation solutions helped restore our farm's water supply. Their team was professional, knowledgeable, and delivered results beyond our expectations.",
       rating: 5,
     },
     {
       name: "Sarah Williams",
       company: "Oceanside Hotel & Spa",
       testimonial:
-        "We upgraded our water treatment system with Aqua Pure and saw immediate improvements. Our guests love the difference in water quality, and we've reduced maintenance costs.",
+        "We upgraded our water treatment system with GESKAL and saw immediate improvements. Our guests love the difference in water quality, and we've reduced maintenance costs.",
       rating: 5,
     },
     {
       name: "David Chen",
       company: "Clearwater Brewing Co.",
       testimonial:
-        "As a brewery, water quality is essential to our business. Aqua Pure provided a customized solution that enhanced our water profile and improved our product consistency.",
+        "As a brewery, water quality is essential to our business. GESKAL provided a customized solution that enhanced our water profile and improved our product consistency.",
       rating: 4,
     },
-  ];
-
-  const waterTreatmentProducts = [
-    {
-      title: "Residential Filtration System",
-      description: "Complete home water filtration for families",
-      price: "$1,299",
-      features: [
-        "Removes sediment and contaminants",
-        "Improves taste and odor",
-        "Easy maintenance design",
-        "5-year warranty"
-      ],
-      popular: true
-    },
-    {
-      title: "Commercial RO System",
-      description: "High-capacity reverse osmosis for businesses",
-      price: "$4,599",
-      features: [
-        "99.9% contaminant removal",
-        "Industrial-grade components",
-        "Low energy consumption",
-        "Remote monitoring capability"
-      ]
-    },
-    {
-      title: "Water Softener Pro",
-      description: "Advanced ion exchange system",
-      price: "$1,899",
-      features: [
-        "Reduces hardness and scale",
-        "Prolongs appliance lifespan",
-        "Automatic regeneration",
-        "Salt efficiency technology"
-      ]
-    }
-  ];
-
-  const disinfectionProducts = [
-    {
-      title: "UV Purification System",
-      description: "Chemical-free pathogen elimination",
-      price: "$899",
-      features: [
-        "Destroys 99.99% of pathogens",
-        "No chemicals needed",
-        "Low energy consumption",
-        "Simple installation"
-      ],
-      popular: true
-    },
-    {
-      title: "Chlorine Dosing System",
-      description: "Reliable municipal-grade disinfection",
-      price: "$1,299",
-      features: [
-        "Consistent dosing control",
-        "Remote monitoring",
-        "Automatic safety shutoff",
-        "Integration with existing systems"
-      ]
-    },
-    {
-      title: "Ozone Generator Pro",
-      description: "Powerful oxidation technology",
-      price: "$2,499",
-      features: [
-        "Industrial strength disinfection",
-        "No chemical residuals",
-        "Destroys resistant microorganisms",
-        "Compact design"
-      ]
-    }
-  ];
-
-  const bioremediationProducts = [
-    {
-      title: "Microbial Treatment Kit",
-      description: "Specialized bacteria for contamination cleanup",
-      price: "$899",
-      features: [
-        "Natural contamination breakdown",
-        "Non-toxic formula",
-        "Multiple applications included",
-        "Technical support"
-      ]
-    },
-    {
-      title: "Enzymatic Treatment System",
-      description: "Accelerated organic contaminant degradation",
-      price: "$1,899",
-      features: [
-        "Fast-acting enzymes",
-        "Targets specific contaminants",
-        "Environmentally friendly",
-        "Commercial-grade performance"
-      ],
-      popular: true
-    },
-    {
-      title: "Bioremediation Consulting",
-      description: "Custom solutions for complex contamination",
-      price: "Custom",
-      features: [
-        "Site assessment included",
-        "Custom treatment design",
-        "Implementation support",
-        "Monitoring and reporting"
-      ]
-    }
   ];
 
   return (
@@ -218,14 +106,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Water Treatment Products */}
-        <ProductSection 
-          title="Water Treatment Products" 
-          description="Our advanced water treatment systems for residential and commercial applications."
-          products={waterTreatmentProducts}
-          serviceId="water-treatment"
-        />
-
         {/* About Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -239,7 +119,7 @@ const Index = () => {
                   Committed to Clean Water and Environmental Sustainability
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  With over 25 years of experience, Aqua Pure Solutions has been at the forefront of water treatment innovation. We're dedicated to delivering clean, safe water solutions while protecting our environment.
+                  With over 25 years of experience, GESKAL Solutions has been at the forefront of water treatment innovation. We're dedicated to delivering clean, safe water solutions while protecting our environment.
                 </p>
                 <p className="text-gray-600 mb-8">
                   Our team of certified water treatment specialists combines technical expertise with a passion for sustainability. We design custom solutions to address your specific water challenges, ensuring optimal results for your home, business, or industrial facility.
@@ -269,14 +149,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Disinfection Products */}
-        <ProductSection 
-          title="Disinfection Systems" 
-          description="Our cutting-edge disinfection technologies for eliminating harmful microorganisms."
-          products={disinfectionProducts}
-          serviceId="disinfection"
-        />
-
         {/* Testimonials Section */}
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -295,14 +167,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        {/* Bioremediation Products */}
-        <ProductSection 
-          title="Bioremediation Solutions" 
-          description="Our eco-friendly bioremediation products for natural water and soil restoration."
-          products={bioremediationProducts}
-          serviceId="bioremediation"
-        />
 
         {/* CTA Section */}
         <CTASection />

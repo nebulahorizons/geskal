@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Droplets, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
@@ -11,7 +10,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Droplets className="h-8 w-8 text-aqua-300" />
-              <span className="text-xl font-bold text-white">Aqua Pure</span>
+              <span className="text-xl font-bold text-white">GESKAL</span>
             </div>
             <p className="text-gray-300 text-sm mt-2 mb-4">
               Providing innovative water treatment solutions to keep your water clean, safe, and environmentally friendly.
@@ -117,7 +116,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-10 pt-6">
           <p className="text-center text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Aqua Pure Solutions. All rights reserved.
+            &copy; {new Date().getFullYear()} GESKAL Solutions. All rights reserved.
           </p>
         </div>
       </div>
