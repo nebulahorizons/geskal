@@ -1,304 +1,222 @@
+
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
-import { Droplets, Shield, Beaker, Wrench, Microscope, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Droplets, Shield, Beaker, Wrench, Microscope } from "lucide-react";
+import ServicesHero from "@/components/ServicesHero";
+import ServiceDetail from "@/components/ServiceDetail";
+import ProductSection from "@/components/ProductSection";
 
 const Services = () => {
+  const services = [
+    {
+      id: "water-treatment",
+      title: "Water Treatment",
+      description: "Our advanced water treatment systems are designed to remove contaminants, improve water quality, and provide safe, clean water for residential, commercial, and industrial applications.",
+      icon: <Droplets />,
+      imagePosition: "right",
+      features: [
+        { title: "Filtration Systems", description: "Remove sediment, chemicals, and contaminants from your water supply." },
+        { title: "Reverse Osmosis", description: "Advanced purification for drinking water and specialized applications." },
+        { title: "Softeners & Conditioners", description: "Reduce hardness and scale buildup in your water systems." },
+        { title: "Iron & Sulfur Removal", description: "Eliminate unwanted minerals and odors from water." }
+      ],
+      products: [
+        {
+          title: "Residential Filter",
+          description: "Whole-house filtration for families",
+          price: "$599",
+          features: ["Removes sediment", "Eliminates chlorine", "Improves taste", "1-year warranty"],
+          popular: true
+        },
+        {
+          title: "Commercial System",
+          description: "High-capacity water treatment",
+          price: "$2,499",
+          features: ["Industrial grade", "Multi-stage filtration", "Computer controlled", "5-year warranty"],
+        },
+        {
+          title: "Reverse Osmosis",
+          description: "Pure water on demand",
+          price: "$899",
+          features: ["5-stage filtration", "Removes 99% of contaminants", "Alkaline remineralization", "Compact design"],
+        }
+      ]
+    },
+    {
+      id: "disinfection",
+      title: "Disinfection Systems",
+      description: "Our cutting-edge disinfection technologies eliminate harmful bacteria, viruses, and pathogens from your water supply, ensuring safe and healthy water for all applications.",
+      icon: <Shield />,
+      imagePosition: "left",
+      features: [
+        { title: "UV Disinfection", description: "Chemical-free pathogen elimination using ultraviolet light." },
+        { title: "Chlorine & Chloramine", description: "Traditional disinfection methods for water supplies." },
+        { title: "Ozone Treatment", description: "Powerful oxidation to destroy microorganisms and remove contaminants." },
+        { title: "Advanced Oxidation", description: "Combination technologies for complete disinfection." }
+      ],
+      products: [
+        {
+          title: "UV Purifier",
+          description: "Chemical-free water disinfection",
+          price: "$499",
+          features: ["Kills 99.99% of bacteria", "Low maintenance", "No chemicals", "Simple installation"],
+          popular: true
+        },
+        {
+          title: "Ozone System",
+          description: "Advanced oxidation treatment",
+          price: "$1,299",
+          features: ["Powerful disinfection", "Removes odors", "Destroys contaminants", "Eco-friendly"],
+        },
+        {
+          title: "Chlorine Dosing",
+          description: "Traditional water treatment",
+          price: "$349",
+          features: ["Precise dosing", "Automatic operation", "Proven technology", "Cost-effective"],
+        }
+      ]
+    },
+    {
+      id: "bioremediation",
+      title: "Bioremediation",
+      description: "Our eco-friendly bioremediation solutions utilize natural biological processes to clean contaminated water and soil, restoring environmental balance without harsh chemicals.",
+      icon: <Beaker />,
+      imagePosition: "right",
+      features: [
+        { title: "Microbial Remediation", description: "Using specialized bacteria to break down contaminants." },
+        { title: "Phytoremediation", description: "Plant-based techniques for soil and water treatment." },
+        { title: "Enzymatic Treatment", description: "Accelerated degradation of organic contaminants." },
+        { title: "Bioaugmentation", description: "Enhancing natural processes for faster remediation." }
+      ],
+      products: [
+        {
+          title: "BioPlus Formula",
+          description: "Bacterial remediation compound",
+          price: "$199",
+          features: ["Natural microbes", "Breaks down oils", "Safe for environment", "Easy application"],
+          popular: true
+        },
+        {
+          title: "EnzyClean Pro",
+          description: "Enzymatic treatment solution",
+          price: "$299",
+          features: ["Fast-acting enzymes", "Degrades organic waste", "No harmful residue", "Commercial strength"],
+        },
+        {
+          title: "AquaPlant System",
+          description: "Plant-based water purification",
+          price: "$749",
+          features: ["Living filtration", "Self-sustaining", "Attractive design", "Low maintenance"],
+        }
+      ]
+    },
+    {
+      id: "maintenance",
+      title: "Maintenance & Support",
+      description: "Keep your water treatment systems operating at peak efficiency with our professional maintenance and support services, extending equipment life and ensuring optimal performance.",
+      icon: <Wrench />,
+      imagePosition: "left",
+      features: [
+        { title: "Scheduled Maintenance", description: "Regular service to prevent issues and optimize performance." },
+        { title: "24/7 Emergency Support", description: "Rapid response to system failures and urgent issues." },
+        { title: "System Monitoring", description: "Advanced monitoring to detect issues before they become problems." },
+        { title: "Parts Replacement", description: "Genuine parts and components for all systems." }
+      ],
+      products: [
+        {
+          title: "Basic Care",
+          description: "Essential maintenance package",
+          price: "$149/year",
+          features: ["Annual inspection", "Filter changes", "System cleaning", "10% off repairs"],
+        },
+        {
+          title: "Premium Care",
+          description: "Complete system protection",
+          price: "$299/year",
+          features: ["Quarterly service", "Priority support", "Parts included", "24/7 phone assistance"],
+          popular: true
+        },
+        {
+          title: "Commercial Plan",
+          description: "Business system maintenance",
+          price: "$699/year",
+          features: ["Monthly checks", "Emergency response", "Compliance testing", "Full documentation"],
+        }
+      ]
+    },
+    {
+      id: "consultation",
+      title: "Water Quality Consultation",
+      description: "Our expert water quality consultants provide comprehensive analysis and recommendations to address your specific water challenges, helping you make informed decisions.",
+      icon: <Microscope />,
+      imagePosition: "right",
+      features: [
+        { title: "Water Testing", description: "Detailed analysis of water quality and contaminants." },
+        { title: "Compliance Assessment", description: "Ensuring your water meets regulatory standards." },
+        { title: "System Design", description: "Custom solutions for your specific water treatment needs." },
+        { title: "Efficiency Optimization", description: "Improving existing system performance." }
+      ],
+      products: [
+        {
+          title: "Basic Analysis",
+          description: "Essential water testing",
+          price: "$99",
+          features: ["10 parameters tested", "Written report", "Recommendations", "Fast turnaround"],
+        },
+        {
+          title: "Comprehensive Test",
+          description: "Complete water quality analysis",
+          price: "$249",
+          features: ["50+ parameters", "Detailed reporting", "Consultation included", "Treatment plan"],
+          popular: true
+        },
+        {
+          title: "Industrial Assessment",
+          description: "Commercial water evaluation",
+          price: "Custom",
+          features: ["Process-specific testing", "Compliance verification", "System evaluation", "Optimization plan"],
+        }
+      ]
+    }
+  ];
+
   return (
     <>
       <Navbar />
       <main>
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-aqua-600 to-ocean-700 py-20 md:py-28">
-          <div className="absolute inset-0 bg-aqua-900 opacity-20"></div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our Services
-              </h1>
-              <p className="text-xl text-aqua-50 max-w-2xl mx-auto">
-                Comprehensive water treatment solutions tailored to your specific needs.
-              </p>
-            </div>
-          </div>
-        </section>
+        <ServicesHero 
+          title="Our Services" 
+          description="Comprehensive water treatment solutions tailored to your specific needs."
+        />
 
-        {/* Service Details */}
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="space-y-24">
-              {/* Water Treatment */}
-              <div id="water-treatment" className="scroll-mt-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  <div>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-aqua-100 flex items-center justify-center text-aqua-600">
-                        <Droplets className="h-5 w-5" />
-                      </div>
-                      <h2 className="text-3xl font-bold text-gray-900">
-                        Water Treatment
-                      </h2>
-                    </div>
-                    <p className="text-gray-600 mb-6">
-                      Our advanced water treatment systems are designed to remove contaminants, improve water quality, and provide safe, clean water for residential, commercial, and industrial applications.
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Filtration Systems:</strong> Remove sediment, chemicals, and contaminants from your water supply.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Reverse Osmosis:</strong> Advanced purification for drinking water and specialized applications.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Softeners & Conditioners:</strong> Reduce hardness and scale buildup in your water systems.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Iron & Sulfur Removal:</strong> Eliminate unwanted minerals and odors from water.
-                        </span>
-                      </li>
-                    </ul>
-                    <Button className="bg-aqua-600 hover:bg-aqua-700" asChild>
-                      <Link to="/contact">Request Consultation</Link>
-                    </Button>
-                  </div>
-                  <div className="rounded-lg overflow-hidden shadow-lg">
-                    <div className="aspect-video bg-aqua-100 flex items-center justify-center">
-                      <Droplets className="h-24 w-24 text-aqua-500" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Disinfection Systems */}
-              <div id="disinfection" className="scroll-mt-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  <div className="order-2 lg:order-1 rounded-lg overflow-hidden shadow-lg">
-                    <div className="aspect-video bg-aqua-100 flex items-center justify-center">
-                      <Shield className="h-24 w-24 text-aqua-500" />
-                    </div>
-                  </div>
-                  <div className="order-1 lg:order-2">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-aqua-100 flex items-center justify-center text-aqua-600">
-                        <Shield className="h-5 w-5" />
-                      </div>
-                      <h2 className="text-3xl font-bold text-gray-900">
-                        Disinfection Systems
-                      </h2>
-                    </div>
-                    <p className="text-gray-600 mb-6">
-                      Our cutting-edge disinfection technologies eliminate harmful bacteria, viruses, and pathogens from your water supply, ensuring safe and healthy water for all applications.
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>UV Disinfection:</strong> Chemical-free pathogen elimination using ultraviolet light.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Chlorine & Chloramine:</strong> Traditional disinfection methods for water supplies.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Ozone Treatment:</strong> Powerful oxidation to destroy microorganisms and remove contaminants.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Advanced Oxidation:</strong> Combination technologies for complete disinfection.
-                        </span>
-                      </li>
-                    </ul>
-                    <Button className="bg-aqua-600 hover:bg-aqua-700" asChild>
-                      <Link to="/contact">Request Consultation</Link>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bioremediation */}
-              <div id="bioremediation" className="scroll-mt-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  <div>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-aqua-100 flex items-center justify-center text-aqua-600">
-                        <Beaker className="h-5 w-5" />
-                      </div>
-                      <h2 className="text-3xl font-bold text-gray-900">
-                        Bioremediation
-                      </h2>
-                    </div>
-                    <p className="text-gray-600 mb-6">
-                      Our eco-friendly bioremediation solutions utilize natural biological processes to clean contaminated water and soil, restoring environmental balance without harsh chemicals.
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Microbial Remediation:</strong> Using specialized bacteria to break down contaminants.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Phytoremediation:</strong> Plant-based techniques for soil and water treatment.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Enzymatic Treatment:</strong> Accelerated degradation of organic contaminants.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Bioaugmentation:</strong> Enhancing natural processes for faster remediation.
-                        </span>
-                      </li>
-                    </ul>
-                    <Button className="bg-aqua-600 hover:bg-aqua-700" asChild>
-                      <Link to="/contact">Request Consultation</Link>
-                    </Button>
-                  </div>
-                  <div className="rounded-lg overflow-hidden shadow-lg">
-                    <div className="aspect-video bg-aqua-100 flex items-center justify-center">
-                      <Beaker className="h-24 w-24 text-aqua-500" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Maintenance & Support */}
-              <div id="maintenance" className="scroll-mt-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  <div className="order-2 lg:order-1 rounded-lg overflow-hidden shadow-lg">
-                    <div className="aspect-video bg-aqua-100 flex items-center justify-center">
-                      <Wrench className="h-24 w-24 text-aqua-500" />
-                    </div>
-                  </div>
-                  <div className="order-1 lg:order-2">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-aqua-100 flex items-center justify-center text-aqua-600">
-                        <Wrench className="h-5 w-5" />
-                      </div>
-                      <h2 className="text-3xl font-bold text-gray-900">
-                        Maintenance & Support
-                      </h2>
-                    </div>
-                    <p className="text-gray-600 mb-6">
-                      Keep your water treatment systems operating at peak efficiency with our professional maintenance and support services, extending equipment life and ensuring optimal performance.
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Scheduled Maintenance:</strong> Regular service to prevent issues and optimize performance.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>24/7 Emergency Support:</strong> Rapid response to system failures and urgent issues.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>System Monitoring:</strong> Advanced monitoring to detect issues before they become problems.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Parts Replacement:</strong> Genuine parts and components for all systems.
-                        </span>
-                      </li>
-                    </ul>
-                    <Button className="bg-aqua-600 hover:bg-aqua-700" asChild>
-                      <Link to="/contact">Request Consultation</Link>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Water Quality Consultation */}
-              <div id="consultation" className="scroll-mt-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  <div>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-aqua-100 flex items-center justify-center text-aqua-600">
-                        <Microscope className="h-5 w-5" />
-                      </div>
-                      <h2 className="text-3xl font-bold text-gray-900">
-                        Water Quality Consultation
-                      </h2>
-                    </div>
-                    <p className="text-gray-600 mb-6">
-                      Our expert water quality consultants provide comprehensive analysis and recommendations to address your specific water challenges, helping you make informed decisions.
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Water Testing:</strong> Detailed analysis of water quality and contaminants.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Compliance Assessment:</strong> Ensuring your water meets regulatory standards.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>System Design:</strong> Custom solutions for your specific water treatment needs.
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-aqua-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">
-                          <strong>Efficiency Optimization:</strong> Improving existing system performance.
-                        </span>
-                      </li>
-                    </ul>
-                    <Button className="bg-aqua-600 hover:bg-aqua-700" asChild>
-                      <Link to="/contact">Request Consultation</Link>
-                    </Button>
-                  </div>
-                  <div className="rounded-lg overflow-hidden shadow-lg">
-                    <div className="aspect-video bg-aqua-100 flex items-center justify-center">
-                      <Microscope className="h-24 w-24 text-aqua-500" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {services.map((service) => (
+                <React.Fragment key={service.id}>
+                  <ServiceDetail
+                    id={service.id}
+                    title={service.title}
+                    description={service.description}
+                    features={service.features}
+                    icon={service.icon}
+                    imagePosition={service.imagePosition as "left" | "right"}
+                  />
+                  
+                  <ProductSection
+                    title={`${service.title} Products`}
+                    description={`Our range of ${service.title.toLowerCase()} products and solutions.`}
+                    products={service.products}
+                    serviceId={service.id}
+                  />
+                </React.Fragment>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
         <CTASection />
       </main>
       <Footer />
