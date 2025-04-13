@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Droplets, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
@@ -13,7 +14,7 @@ const Footer = () => {
               <span className="text-xl font-bold text-white">GESKAL</span>
             </div>
             <p className="text-gray-300 text-sm mt-2 mb-4">
-              Providing innovative water treatment solutions to keep your water clean, safe, and environmentally friendly.
+              Proporcionamos soluciones innovadoras para tratamiento de agua que mantienen su agua limpia, segura y ambientalmente amigable.
             </p>
             <div className="flex space-x-4 mt-4">
               <a href="#" className="text-gray-300 hover:text-white">
@@ -32,74 +33,74 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-aqua-200">Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-aqua-200">Servicios</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/services#water-treatment" className="text-gray-300 hover:text-white transition-colors">
-                  Water Treatment
+                  Tratamiento de Agua
                 </Link>
               </li>
               <li>
                 <Link to="/services#disinfection" className="text-gray-300 hover:text-white transition-colors">
-                  Disinfection Systems
+                  Sistemas de Desinfección
                 </Link>
               </li>
               <li>
                 <Link to="/services#bioremediation" className="text-gray-300 hover:text-white transition-colors">
-                  Bioremediation
+                  Biorremediación
                 </Link>
               </li>
               <li>
                 <Link to="/services#maintenance" className="text-gray-300 hover:text-white transition-colors">
-                  Maintenance & Support
+                  Mantenimiento y Soporte
                 </Link>
               </li>
               <li>
                 <Link to="/services#consultation" className="text-gray-300 hover:text-white transition-colors">
-                  Water Quality Consultation
+                  Consultoría de Calidad de Agua
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-aqua-200">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-aqua-200">Enlaces Rápidos</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-                  Home
+                  Inicio
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About Us
+                  Nosotros
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                  Services
+                  Servicios
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact
+                  Contacto
                 </Link>
               </li>
               <li>
                 <Link to="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">
-                  Privacy Policy
+                  Política de Privacidad
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-aqua-200">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-4 text-aqua-200">Contáctenos</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-aqua-300 mt-0.5" />
                 <span className="text-gray-300">
-                  123 Water Lane, Clearwater, CA 94103
+                  123 Calle del Agua, Agua Clara, CA 94103
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -108,7 +109,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-aqua-300" />
-                <span className="text-gray-300">info@aquapure.com</span>
+                <span className="text-gray-300">info@geskal.com</span>
               </li>
             </ul>
           </div>
@@ -116,7 +117,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-10 pt-6">
           <p className="text-center text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} GESKAL Solutions. All rights reserved.
+            &copy; {new Date().getFullYear()} GESKAL Solutions. Todos los derechos reservados.
           </p>
         </div>
       </div>

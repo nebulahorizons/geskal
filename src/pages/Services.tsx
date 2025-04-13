@@ -6,72 +6,114 @@ import CTASection from "@/components/CTASection";
 import { Droplets, Shield, Beaker, Wrench, Microscope } from "lucide-react";
 import ServicesHero from "@/components/ServicesHero";
 import ServiceDetail from "@/components/ServiceDetail";
+import ProductSection from "@/components/ProductSection";
 
 const Services = () => {
   const services = [
     {
       id: "water-treatment",
-      title: "Water Treatment",
-      description: "Our advanced water treatment systems are designed to remove contaminants, improve water quality, and provide safe, clean water for residential, commercial, and industrial applications.",
+      title: "Tratamiento de Agua",
+      description: "Nuestros sistemas avanzados de tratamiento de agua están diseñados para eliminar contaminantes, mejorar la calidad del agua y proporcionar agua limpia y segura para aplicaciones residenciales, comerciales e industriales.",
       icon: <Droplets />,
       imagePosition: "right",
       features: [
-        { title: "Filtration Systems", description: "Remove sediment, chemicals, and contaminants from your water supply." },
-        { title: "Reverse Osmosis", description: "Advanced purification for drinking water and specialized applications." },
-        { title: "Softeners & Conditioners", description: "Reduce hardness and scale buildup in your water systems." },
-        { title: "Iron & Sulfur Removal", description: "Eliminate unwanted minerals and odors from water." }
+        { title: "Sistemas de Filtración", description: "Elimine sedimentos, químicos y contaminantes de su suministro de agua." },
+        { title: "Ósmosis Inversa", description: "Purificación avanzada para agua potable y aplicaciones especializadas." },
+        { title: "Suavizantes y Acondicionadores", description: "Reduzca la dureza y la acumulación de sarro en sus sistemas de agua." },
+        { title: "Eliminación de Hierro y Azufre", description: "Elimine minerales y olores no deseados del agua." }
       ]
     },
     {
       id: "disinfection",
-      title: "Disinfection Systems",
-      description: "Our cutting-edge disinfection technologies eliminate harmful bacteria, viruses, and pathogens from your water supply, ensuring safe and healthy water for all applications.",
+      title: "Sistemas de Desinfección",
+      description: "Nuestras tecnologías de desinfección de vanguardia eliminan bacterias dañinas, virus y patógenos de su suministro de agua, garantizando agua segura y saludable para todas las aplicaciones.",
       icon: <Shield />,
       imagePosition: "left",
       features: [
-        { title: "UV Disinfection", description: "Chemical-free pathogen elimination using ultraviolet light." },
-        { title: "Chlorine & Chloramine", description: "Traditional disinfection methods for water supplies." },
-        { title: "Ozone Treatment", description: "Powerful oxidation to destroy microorganisms and remove contaminants." },
-        { title: "Advanced Oxidation", description: "Combination technologies for complete disinfection." }
+        { title: "Desinfección UV", description: "Eliminación de patógenos sin químicos mediante luz ultravioleta." },
+        { title: "Cloro y Cloramina", description: "Métodos tradicionales de desinfección para suministros de agua." },
+        { title: "Tratamiento con Ozono", description: "Oxidación potente para destruir microorganismos y eliminar contaminantes." },
+        { title: "Oxidación Avanzada", description: "Tecnologías combinadas para una desinfección completa." }
       ]
     },
     {
       id: "bioremediation",
-      title: "Bioremediation",
-      description: "Our eco-friendly bioremediation solutions utilize natural biological processes to clean contaminated water and soil, restoring environmental balance without harsh chemicals.",
+      title: "Biorremediación",
+      description: "Nuestras soluciones ecológicas de biorremediación utilizan procesos biológicos naturales para limpiar agua y suelo contaminados, restaurando el equilibrio ambiental sin productos químicos agresivos.",
       icon: <Beaker />,
       imagePosition: "right",
       features: [
-        { title: "Microbial Remediation", description: "Using specialized bacteria to break down contaminants." },
-        { title: "Phytoremediation", description: "Plant-based techniques for soil and water treatment." },
-        { title: "Enzymatic Treatment", description: "Accelerated degradation of organic contaminants." },
-        { title: "Bioaugmentation", description: "Enhancing natural processes for faster remediation." }
+        { title: "Remediación Microbiana", description: "Uso de bacterias especializadas para descomponer contaminantes." },
+        { title: "Fitorremediación", description: "Técnicas basadas en plantas para tratamiento de suelo y agua." },
+        { title: "Tratamiento Enzimático", description: "Degradación acelerada de contaminantes orgánicos." },
+        { title: "Bioaumentación", description: "Mejora de procesos naturales para una remediación más rápida." }
       ]
     },
     {
       id: "maintenance",
-      title: "Maintenance & Support",
-      description: "Keep your water treatment systems operating at peak efficiency with our professional maintenance and support services, extending equipment life and ensuring optimal performance.",
+      title: "Mantenimiento y Soporte",
+      description: "Mantenga sus sistemas de tratamiento de agua funcionando con máxima eficiencia con nuestros servicios profesionales de mantenimiento y soporte, extendiendo la vida útil del equipo y asegurando un rendimiento óptimo.",
       icon: <Wrench />,
       imagePosition: "left",
       features: [
-        { title: "Scheduled Maintenance", description: "Regular service to prevent issues and optimize performance." },
-        { title: "24/7 Emergency Support", description: "Rapid response to system failures and urgent issues." },
-        { title: "System Monitoring", description: "Advanced monitoring to detect issues before they become problems." },
-        { title: "Parts Replacement", description: "Genuine parts and components for all systems." }
+        { title: "Mantenimiento Programado", description: "Servicio regular para prevenir problemas y optimizar el rendimiento." },
+        { title: "Soporte de Emergencia 24/7", description: "Respuesta rápida a fallos del sistema y problemas urgentes." },
+        { title: "Monitoreo del Sistema", description: "Monitoreo avanzado para detectar problemas antes de que se conviertan en problemas." },
+        { title: "Reemplazo de Piezas", description: "Piezas y componentes genuinos para todos los sistemas." }
       ]
     },
     {
       id: "consultation",
-      title: "Water Quality Consultation",
-      description: "Our expert water quality consultants provide comprehensive analysis and recommendations to address your specific water challenges, helping you make informed decisions.",
+      title: "Consultoría de Calidad del Agua",
+      description: "Nuestros expertos consultores de calidad del agua proporcionan análisis y recomendaciones completas para abordar sus desafíos específicos del agua, ayudándole a tomar decisiones informadas.",
       icon: <Microscope />,
       imagePosition: "right",
       features: [
-        { title: "Water Testing", description: "Detailed analysis of water quality and contaminants." },
-        { title: "Compliance Assessment", description: "Ensuring your water meets regulatory standards." },
-        { title: "System Design", description: "Custom solutions for your specific water treatment needs." },
-        { title: "Efficiency Optimization", description: "Improving existing system performance." }
+        { title: "Análisis de Agua", description: "Análisis detallado de la calidad del agua y contaminantes." },
+        { title: "Evaluación de Cumplimiento", description: "Asegurando que su agua cumpla con los estándares regulatorios." },
+        { title: "Diseño de Sistemas", description: "Soluciones personalizadas para sus necesidades específicas de tratamiento de agua." },
+        { title: "Optimización de Eficiencia", description: "Mejorando el rendimiento de los sistemas existentes." }
+      ]
+    }
+  ];
+
+  const waterSoftenerProducts = [
+    {
+      title: "Ablandador de Agua Premium",
+      description: "Sistema avanzado para eliminar la dureza del agua y proteger sus electrodomésticos y tuberías.",
+      price: "€1,299",
+      features: [
+        "Elimina calcio y magnesio",
+        "Reduce manchas y acumulación de sarro",
+        "Prolonga la vida útil de electrodomésticos",
+        "Sistema de regeneración eficiente",
+        "Programación digital fácil de usar"
+      ],
+      image: "/lovable-uploads/d1b76ecb-a690-48b5-bf19-7c8b6729f9af.png",
+      popular: true
+    },
+    {
+      title: "Ablandador Compacto",
+      description: "Solución ideal para espacios pequeños o apartamentos que aún ofrece excelente rendimiento.",
+      price: "€899",
+      features: [
+        "Diseño compacto para espacios reducidos",
+        "Instalación sencilla",
+        "Bajo consumo de sal y agua",
+        "Ideal para 1-3 personas",
+        "Control electrónico"
+      ]
+    },
+    {
+      title: "Ablandador Industrial",
+      description: "Sistemas de gran capacidad para aplicaciones comerciales e industriales con alta demanda.",
+      price: "Personalizado",
+      features: [
+        "Capacidad para grandes volúmenes",
+        "Diseño redundante para operación continua",
+        "Control computarizado avanzado",
+        "Monitoreo remoto disponible",
+        "Servicio de instalación profesional incluido"
       ]
     }
   ];
@@ -81,8 +123,8 @@ const Services = () => {
       <Navbar />
       <main>
         <ServicesHero 
-          title="Our Services" 
-          description="Comprehensive water treatment solutions tailored to your specific needs."
+          title="Nuestros Servicios" 
+          description="Soluciones completas de tratamiento de agua adaptadas a sus necesidades específicas."
         />
 
         <section className="py-16 md:py-24 bg-white">
@@ -98,6 +140,15 @@ const Services = () => {
                     icon={service.icon}
                     imagePosition={service.imagePosition as "left" | "right"}
                   />
+                  
+                  {service.id === "water-treatment" && (
+                    <ProductSection
+                      title="Ablandadores de Agua"
+                      description="Nuestros ablandadores de agua de alta calidad eliminan los minerales que causan la dureza, protegiendo sus tuberías, electrodomésticos y mejorando la calidad del agua en su hogar o negocio."
+                      products={waterSoftenerProducts}
+                      serviceId="water-treatment"
+                    />
+                  )}
                 </React.Fragment>
               ))}
             </div>

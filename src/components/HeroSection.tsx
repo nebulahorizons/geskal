@@ -16,13 +16,13 @@ const HeroSection = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1 text-white text-sm mb-4">
               <Droplets className="h-4 w-4" />
-              <span>Innovative Water Solutions</span>
+              <span>Soluciones Innovadoras para Agua</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Pure Water. Better Life.
+              Agua Pura. Mejor Vida.
             </h1>
             <p className="text-lg md:text-xl text-aqua-50 mb-8 max-w-2xl">
-              We provide state-of-the-art water treatment, disinfection, and bioremediation solutions for residential, commercial, and industrial applications.
+              Ofrecemos soluciones de vanguardia para tratamiento de agua, desinfección y biorremediación para aplicaciones residenciales, comerciales e industriales.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Button
@@ -31,7 +31,7 @@ const HeroSection = () => {
                 asChild
               >
                 <Link to="/contact">
-                  Get a Free Consultation
+                  Obtener Consulta Gratuita
                 </Link>
               </Button>
               <Button
@@ -41,7 +41,7 @@ const HeroSection = () => {
                 asChild
               >
                 <Link to="/services" className="flex items-center">
-                  <span>Our Services</span>
+                  <span>Nuestros Servicios</span>
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

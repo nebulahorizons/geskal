@@ -28,18 +28,18 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               <Link to="/" className="text-gray-700 hover:text-aqua-600 transition-colors font-medium">
-                Home
+                Inicio
               </Link>
               <Link to="/services" className="text-gray-700 hover:text-aqua-600 transition-colors font-medium">
-                Services
+                Servicios
               </Link>
               <Link to="/about" className="text-gray-700 hover:text-aqua-600 transition-colors font-medium">
-                About Us
+                Nosotros
               </Link>
               <Link to="/contact" className="text-gray-700 hover:text-aqua-600 transition-colors font-medium">
-                Contact
+                Contacto
               </Link>
-              <Button className="bg-aqua-600 hover:bg-aqua-700">Get a Quote</Button>
+              <Button className="bg-aqua-600 hover:bg-aqua-700">Solicitar Cotización</Button>
             </div>
           </div>
           
@@ -67,31 +67,31 @@ const Navbar = () => {
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-aqua-600 hover:bg-gray-50"
             onClick={() => setIsMenuOpen(false)}
           >
-            Home
+            Inicio
           </Link>
           <Link
             to="/services"
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-aqua-600 hover:bg-gray-50"
             onClick={() => setIsMenuOpen(false)}
           >
-            Services
+            Servicios
           </Link>
           <Link
             to="/about"
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-aqua-600 hover:bg-gray-50"
             onClick={() => setIsMenuOpen(false)}
           >
-            About Us
+            Nosotros
           </Link>
           <Link
             to="/contact"
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-aqua-600 hover:bg-gray-50"
             onClick={() => setIsMenuOpen(false)}
           >
-            Contact
+            Contacto
           </Link>
           <div className="px-3 py-2">
-            <Button className="w-full bg-aqua-600 hover:bg-aqua-700">Get a Quote</Button>
+            <Button className="w-full bg-aqua-600 hover:bg-aqua-700">Solicitar Cotización</Button>
           </div>
         </div>
       </div>

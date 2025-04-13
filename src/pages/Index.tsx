@@ -9,60 +9,61 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import StatsSection from "@/components/StatsSection";
 import CTASection from "@/components/CTASection";
+import WaterTreatmentProducts from "@/components/WaterTreatmentProducts";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const services = [
     {
       icon: <Droplets className="h-6 w-6" />,
-      title: "Water Treatment",
+      title: "Tratamiento de Agua",
       description:
-        "Advanced water treatment systems to remove contaminants and improve water quality for residential and commercial properties.",
+        "Sistemas avanzados de tratamiento de agua para eliminar contaminantes y mejorar la calidad del agua para propiedades residenciales y comerciales.",
       link: "/services#water-treatment",
     },
     {
       icon: <Shield className="h-6 w-6" />,
-      title: "Disinfection Systems",
+      title: "Sistemas de Desinfección",
       description:
-        "Cutting-edge disinfection technologies to eliminate harmful bacteria, viruses, and pathogens from your water supply.",
+        "Tecnologías de desinfección de vanguardia para eliminar bacterias dañinas, virus y patógenos de su suministro de agua.",
       link: "/services#disinfection",
     },
     {
       icon: <Beaker className="h-6 w-6" />,
-      title: "Bioremediation",
+      title: "Biorremediación",
       description:
-        "Eco-friendly bioremediation solutions to clean contaminated water and soil using natural biological processes.",
+        "Soluciones ecológicas de biorremediación para limpiar agua y suelo contaminados utilizando procesos biológicos naturales.",
       link: "/services#bioremediation",
     },
     {
       icon: <Wrench className="h-6 w-6" />,
-      title: "Maintenance & Support",
+      title: "Mantenimiento y Soporte",
       description:
-        "Professional maintenance and support services to ensure your water treatment systems operate at peak efficiency.",
+        "Servicios profesionales de mantenimiento y soporte para garantizar que sus sistemas de tratamiento de agua funcionen con máxima eficiencia.",
       link: "/services#maintenance",
     },
   ];
 
   const testimonials = [
     {
-      name: "Michael Johnson",
-      company: "Green Valley Farms",
+      name: "Miguel Jiménez",
+      company: "Granjas Valle Verde",
       testimonial:
-        "GESKAL's bioremediation solutions helped restore our farm's water supply. Their team was professional, knowledgeable, and delivered results beyond our expectations.",
+        "Las soluciones de biorremediación de GESKAL ayudaron a restaurar el suministro de agua de nuestra granja. Su equipo fue profesional, conocedor y entregó resultados más allá de nuestras expectativas.",
       rating: 5,
     },
     {
-      name: "Sarah Williams",
-      company: "Oceanside Hotel & Spa",
+      name: "Sara Rodríguez",
+      company: "Hotel y Spa Oceanside",
       testimonial:
-        "We upgraded our water treatment system with GESKAL and saw immediate improvements. Our guests love the difference in water quality, and we've reduced maintenance costs.",
+        "Actualizamos nuestro sistema de tratamiento de agua con GESKAL y vimos mejoras inmediatas. Nuestros huéspedes adoran la diferencia en la calidad del agua, y hemos reducido los costos de mantenimiento.",
       rating: 5,
     },
     {
       name: "David Chen",
-      company: "Clearwater Brewing Co.",
+      company: "Cervecería Agua Clara",
       testimonial:
-        "As a brewery, water quality is essential to our business. GESKAL provided a customized solution that enhanced our water profile and improved our product consistency.",
+        "Como cervecería, la calidad del agua es esencial para nuestro negocio. GESKAL proporcionó una solución personalizada que mejoró nuestro perfil de agua y mejoró la consistencia de nuestro producto.",
       rating: 4,
     },
   ];
@@ -82,11 +83,10 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Services
+                Nuestros Servicios
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                We provide comprehensive water treatment solutions to meet your
-                specific needs.
+                Ofrecemos soluciones completas de tratamiento de agua para satisfacer sus necesidades específicas.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -100,11 +100,14 @@ const Index = () => {
                 className="border-primary text-primary hover:bg-primary hover:text-white"
                 asChild
               >
-                <Link to="/services">View All Services</Link>
+                <Link to="/services">Ver Todos los Servicios</Link>
               </Button>
             </div>
           </div>
         </section>
+
+        {/* Products Section */}
+        <WaterTreatmentProducts />
 
         {/* About Section */}
         <section className="py-16 bg-white">
@@ -113,28 +116,28 @@ const Index = () => {
               <div>
                 <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary rounded-full px-3 py-1 text-sm mb-4">
                   <Award className="h-4 w-4" />
-                  <span>Leading Water Treatment Provider</span>
+                  <span>Proveedor Líder en Tratamiento de Agua</span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Committed to Clean Water and Environmental Sustainability
+                  Comprometidos con el Agua Limpia y la Sostenibilidad Ambiental
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  With over 25 years of experience, GESKAL Solutions has been at the forefront of water treatment innovation. We're dedicated to delivering clean, safe water solutions while protecting our environment.
+                  Con más de 25 años de experiencia, GESKAL Solutions ha estado a la vanguardia de la innovación en tratamiento de agua. Estamos dedicados a proporcionar soluciones de agua limpia y segura mientras protegemos nuestro medio ambiente.
                 </p>
                 <p className="text-gray-600 mb-8">
-                  Our team of certified water treatment specialists combines technical expertise with a passion for sustainability. We design custom solutions to address your specific water challenges, ensuring optimal results for your home, business, or industrial facility.
+                  Nuestro equipo de especialistas certificados en tratamiento de agua combina experiencia técnica con pasión por la sostenibilidad. Diseñamos soluciones personalizadas para abordar sus desafíos específicos de agua, asegurando resultados óptimos para su hogar, negocio o instalación industrial.
                 </p>
                 <Button className="bg-primary hover:bg-primary/90" asChild>
-                  <Link to="/about">Learn More About Us</Link>
+                  <Link to="/about">Conozca Más Sobre Nosotros</Link>
                 </Button>
               </div>
               <div className="relative">
                 <div className="aspect-video bg-aqua-200 rounded-lg overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary to-ocean-600 opacity-90 flex items-center justify-center">
                     <div className="text-white text-center p-8">
-                      <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+                      <h3 className="text-2xl font-bold mb-4">Nuestra Misión</h3>
                       <p className="text-aqua-50">
-                        To provide innovative water treatment solutions that protect public health, preserve natural resources, and promote environmental sustainability.
+                        Proporcionar soluciones innovadoras de tratamiento de agua que protejan la salud pública, preserven los recursos naturales y promuevan la sostenibilidad ambiental.
                       </p>
                     </div>
                   </div>
@@ -154,10 +157,10 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What Our Clients Say
+                Lo Que Dicen Nuestros Clientes
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Don't just take our word for it. Here's what our clients have to say about our water treatment solutions.
+                No se fíe solo de nuestra palabra. Esto es lo que nuestros clientes dicen sobre nuestras soluciones de tratamiento de agua.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
