@@ -9,6 +9,7 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import StatsSection from "@/components/StatsSection";
 import CTASection from "@/components/CTASection";
+import ProductSection from "@/components/ProductSection";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -67,6 +68,117 @@ const Index = () => {
     },
   ];
 
+  const waterTreatmentProducts = [
+    {
+      title: "Residential Filtration System",
+      description: "Complete home water filtration for families",
+      price: "$1,299",
+      features: [
+        "Removes sediment and contaminants",
+        "Improves taste and odor",
+        "Easy maintenance design",
+        "5-year warranty"
+      ],
+      popular: true
+    },
+    {
+      title: "Commercial RO System",
+      description: "High-capacity reverse osmosis for businesses",
+      price: "$4,599",
+      features: [
+        "99.9% contaminant removal",
+        "Industrial-grade components",
+        "Low energy consumption",
+        "Remote monitoring capability"
+      ]
+    },
+    {
+      title: "Water Softener Pro",
+      description: "Advanced ion exchange system",
+      price: "$1,899",
+      features: [
+        "Reduces hardness and scale",
+        "Prolongs appliance lifespan",
+        "Automatic regeneration",
+        "Salt efficiency technology"
+      ]
+    }
+  ];
+
+  const disinfectionProducts = [
+    {
+      title: "UV Purification System",
+      description: "Chemical-free pathogen elimination",
+      price: "$899",
+      features: [
+        "Destroys 99.99% of pathogens",
+        "No chemicals needed",
+        "Low energy consumption",
+        "Simple installation"
+      ],
+      popular: true
+    },
+    {
+      title: "Chlorine Dosing System",
+      description: "Reliable municipal-grade disinfection",
+      price: "$1,299",
+      features: [
+        "Consistent dosing control",
+        "Remote monitoring",
+        "Automatic safety shutoff",
+        "Integration with existing systems"
+      ]
+    },
+    {
+      title: "Ozone Generator Pro",
+      description: "Powerful oxidation technology",
+      price: "$2,499",
+      features: [
+        "Industrial strength disinfection",
+        "No chemical residuals",
+        "Destroys resistant microorganisms",
+        "Compact design"
+      ]
+    }
+  ];
+
+  const bioremediationProducts = [
+    {
+      title: "Microbial Treatment Kit",
+      description: "Specialized bacteria for contamination cleanup",
+      price: "$899",
+      features: [
+        "Natural contamination breakdown",
+        "Non-toxic formula",
+        "Multiple applications included",
+        "Technical support"
+      ]
+    },
+    {
+      title: "Enzymatic Treatment System",
+      description: "Accelerated organic contaminant degradation",
+      price: "$1,899",
+      features: [
+        "Fast-acting enzymes",
+        "Targets specific contaminants",
+        "Environmentally friendly",
+        "Commercial-grade performance"
+      ],
+      popular: true
+    },
+    {
+      title: "Bioremediation Consulting",
+      description: "Custom solutions for complex contamination",
+      price: "Custom",
+      features: [
+        "Site assessment included",
+        "Custom treatment design",
+        "Implementation support",
+        "Monitoring and reporting"
+      ]
+    }
+  ];
+
   return (
     <>
       <Navbar />
@@ -97,7 +209,7 @@ const Index = () => {
             <div className="mt-12 text-center">
               <Button
                 variant="outline"
-                className="border-aqua-600 text-aqua-600 hover:bg-aqua-600 hover:text-white"
+                className="border-primary text-primary hover:bg-primary hover:text-white"
                 asChild
               >
                 <Link to="/services">View All Services</Link>
@@ -106,12 +218,20 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Water Treatment Products */}
+        <ProductSection 
+          title="Water Treatment Products" 
+          description="Our advanced water treatment systems for residential and commercial applications."
+          products={waterTreatmentProducts}
+          serviceId="water-treatment"
+        />
+
         {/* About Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center space-x-2 bg-aqua-100 text-aqua-800 rounded-full px-3 py-1 text-sm mb-4">
+                <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary rounded-full px-3 py-1 text-sm mb-4">
                   <Award className="h-4 w-4" />
                   <span>Leading Water Treatment Provider</span>
                 </div>
@@ -124,13 +244,13 @@ const Index = () => {
                 <p className="text-gray-600 mb-8">
                   Our team of certified water treatment specialists combines technical expertise with a passion for sustainability. We design custom solutions to address your specific water challenges, ensuring optimal results for your home, business, or industrial facility.
                 </p>
-                <Button className="bg-aqua-600 hover:bg-aqua-700" asChild>
+                <Button className="bg-primary hover:bg-primary/90" asChild>
                   <Link to="/about">Learn More About Us</Link>
                 </Button>
               </div>
               <div className="relative">
                 <div className="aspect-video bg-aqua-200 rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-aqua-500 to-ocean-600 opacity-90 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-ocean-600 opacity-90 flex items-center justify-center">
                     <div className="text-white text-center p-8">
                       <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                       <p className="text-aqua-50">
@@ -139,15 +259,23 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-aqua-100 rounded-lg hidden md:block">
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/10 rounded-lg hidden md:block">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Droplets className="h-12 w-12 text-aqua-600 animate-flow" />
+                    <Droplets className="h-12 w-12 text-primary animate-flow" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Disinfection Products */}
+        <ProductSection 
+          title="Disinfection Systems" 
+          description="Our cutting-edge disinfection technologies for eliminating harmful microorganisms."
+          products={disinfectionProducts}
+          serviceId="disinfection"
+        />
 
         {/* Testimonials Section */}
         <section className="py-16 md:py-24 bg-white">
@@ -167,6 +295,14 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* Bioremediation Products */}
+        <ProductSection 
+          title="Bioremediation Solutions" 
+          description="Our eco-friendly bioremediation products for natural water and soil restoration."
+          products={bioremediationProducts}
+          serviceId="bioremediation"
+        />
 
         {/* CTA Section */}
         <CTASection />
