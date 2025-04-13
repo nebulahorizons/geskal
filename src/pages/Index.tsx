@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Droplets, Shield, Flask, Wrench, Award } from "lucide-react";
+import { Droplets, Shield, Beaker, Wrench, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -28,7 +28,7 @@ const Index = () => {
       link: "/services#disinfection",
     },
     {
-      icon: <Flask className="h-6 w-6" />,
+      icon: <Beaker className="h-6 w-6" />,
       title: "Bioremediation",
       description:
         "Eco-friendly bioremediation solutions to clean contaminated water and soil using natural biological processes.",

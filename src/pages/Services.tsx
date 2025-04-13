@@ -1,9 +1,8 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
-import { Droplets, Shield, Flask, Wrench, Microscope, ArrowRight } from "lucide-react";
+import { Droplets, Shield, Beaker, Wrench, Microscope, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -143,7 +142,7 @@ const Services = () => {
                   <div>
                     <div className="flex items-center space-x-3 mb-4">
                       <div className="w-10 h-10 rounded-full bg-aqua-100 flex items-center justify-center text-aqua-600">
-                        <Flask className="h-5 w-5" />
+                        <Beaker className="h-5 w-5" />
                       </div>
                       <h2 className="text-3xl font-bold text-gray-900">
                         Bioremediation
@@ -184,7 +183,7 @@ const Services = () => {
                   </div>
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <div className="aspect-video bg-aqua-100 flex items-center justify-center">
-                      <Flask className="h-24 w-24 text-aqua-500" />
+                      <Beaker className="h-24 w-24 text-aqua-500" />
                     </div>
                   </div>
                 </div>
