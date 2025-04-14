@@ -1,7 +1,9 @@
 
 import React from "react";
-import { Droplets } from "lucide-react";
+import { Droplets, ChevronRight } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const WaterTreatmentProducts = () => {
   const products = [
@@ -74,6 +76,15 @@ const WaterTreatmentProducts = () => {
               popular={product.popular}
             />
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <Button variant="outline" asChild className="group">
+            <Link to="/products" className="flex items-center">
+              Ver todos los productos
+              <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
