@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav className={cn(
-      "sticky top-0 z-50 bg-white/90 backdrop-blur-sm transition-all duration-200",
+      "sticky top-0 z-50 bg-[#131313] backdrop-blur-sm transition-all duration-200",
       isScrolled ? "shadow-md" : "shadow-sm"
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
