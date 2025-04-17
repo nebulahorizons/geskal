@@ -34,7 +34,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <Droplets className="h-6 w-6 md:h-8 md:w-8 text-aqua-600" />
-              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-aqua-600 to-ocean-700 bg-clip-text text-transparent">
+              <span className="text-xl md:text-2xl font-bold font-days bg-gradient-to-r from-aqua-600 to-ocean-700 bg-clip-text text-transparent">
                 GESKAL
               </span>
             </Link>

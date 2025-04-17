@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				days: ['"Days One"', 'sans-serif'],
+				roboto: ['"Roboto"', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -25,7 +30,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#64c3eb',
+					DEFAULT: '#65C4EC',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
