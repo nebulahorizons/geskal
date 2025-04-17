@@ -34,7 +34,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <Droplets className="h-6 w-6 md:h-8 md:w-8 text-aqua-600" />
-              <span className="text-xl md:text-2xl font-bold font-days bg-gradient-to-r from-aqua-600 to-ocean-700 bg-clip-text text-transparent">
+              <span className="text-xl md:text-2xl font-bold font-days text-[#f1f1f1]">
                 GESKAL
               </span>
             </Link>
@@ -42,19 +42,19 @@ const Navbar = () => {
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-aqua-600 transition-colors font-medium">
+              <Link to="/" className="text-[#f1f1f1] hover:text-aqua-600 transition-colors font-medium">
                 Inicio
               </Link>
-              <Link to="/services" className="text-gray-700 hover:text-aqua-600 transition-colors font-medium">
+              <Link to="/services" className="text-[#f1f1f1] hover:text-aqua-600 transition-colors font-medium">
                 Servicios
               </Link>
-              <Link to="/products" className="text-gray-700 hover:text-aqua-600 transition-colors font-medium">
+              <Link to="/products" className="text-[#f1f1f1] hover:text-aqua-600 transition-colors font-medium">
                 Productos
               </Link>
-              <Link to="/about" className="text-gray-700 hover:text-aqua-600 transition-colors font-medium">
+              <Link to="/about" className="text-[#f1f1f1] hover:text-aqua-600 transition-colors font-medium">
                 Nosotros
               </Link>
-              <Link to="/contact" className="text-gray-700 hover:text-aqua-600 transition-colors font-medium">
+              <Link to="/contact" className="text-[#f1f1f1] hover:text-aqua-600 transition-colors font-medium">
                 Contacto
               </Link>
               <Button className="bg-aqua-600 hover:bg-aqua-700">Solicitar Cotización</Button>
@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-aqua-600 focus:outline-none"
+              className="text-[#f1f1f1] hover:text-aqua-600 focus:outline-none"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -75,42 +75,42 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div
         className={cn(
-          "md:hidden bg-white",
+          "md:hidden bg-[#131313]",
           isMenuOpen ? "block" : "hidden"
         )}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <Link
             to="/"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-aqua-600 hover:bg-gray-50"
+            className="block px-3 py-2 rounded-md text-base font-medium text-[#f1f1f1] hover:text-aqua-600 hover:bg-gray-900"
             onClick={() => setIsMenuOpen(false)}
           >
             Inicio
           </Link>
           <Link
             to="/services"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-aqua-600 hover:bg-gray-50"
+            className="block px-3 py-2 rounded-md text-base font-medium text-[#f1f1f1] hover:text-aqua-600 hover:bg-gray-900"
             onClick={() => setIsMenuOpen(false)}
           >
             Servicios
           </Link>
           <Link
             to="/products"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-aqua-600 hover:bg-gray-50"
+            className="block px-3 py-2 rounded-md text-base font-medium text-[#f1f1f1] hover:text-aqua-600 hover:bg-gray-900"
             onClick={() => setIsMenuOpen(false)}
           >
             Productos
           </Link>
           <Link
             to="/about"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-aqua-600 hover:bg-gray-50"
+            className="block px-3 py-2 rounded-md text-base font-medium text-[#f1f1f1] hover:text-aqua-600 hover:bg-gray-900"
             onClick={() => setIsMenuOpen(false)}
           >
             Nosotros
           </Link>
           <Link
             to="/contact"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-aqua-600 hover:bg-gray-50"
+            className="block px-3 py-2 rounded-md text-base font-medium text-[#f1f1f1] hover:text-aqua-600 hover:bg-gray-900"
             onClick={() => setIsMenuOpen(false)}
           >
             Contacto
